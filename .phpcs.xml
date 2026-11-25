@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<ruleset name="PBCRApiPrivacy Standards">
+    <description>WordPress Coding Standards for PBCR API Privacy Plugin</description>
+
+    <!-- Check only PHP files in the plugin -->
+    <file>./pbcr-api-privacy.php</file>
+    <file>./uninstall.php</file>
+    <file>./includes</file>
+
+    <!-- Exclude third party code -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/tests/coverage/*</exclude-pattern>
+    <exclude-pattern>*/logs/*</exclude-pattern>
+    <exclude-pattern>*/css/*</exclude-pattern>
+
+    <!-- Exclude CSS and other non-PHP files -->
+    <exclude-pattern>*.css</exclude-pattern>
+    <exclude-pattern>*.js</exclude-pattern>
+    <exclude-pattern>*.json</exclude-pattern>
+    <exclude-pattern>*.md</exclude-pattern>
+    <exclude-pattern>*/index.php</exclude-pattern>
+
+    <!-- Use WordPress-Extra ruleset with some customizations -->
+    <rule ref="WordPress-Extra">
+        <!-- Allow short array syntax [] instead of array() -->
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+        <exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+        <!-- PSR-4 class file names (same convention as pbcr-agent-mode) -->
+        <exclude name="WordPress.Files.FileName"/>
+    </rule>
+
+    <!-- Include WordPress documentation standards -->
+    <rule ref="WordPress-Docs"/>
+
+    <!-- Set text domain for internationalization -->
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array">
+                <element value="pbcr-api-privacy"/>
+            </property>
+        </properties>
+    </rule>
+
+    <!-- Allow short array syntax -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+
+    <!-- Show progress -->
+    <arg value="p"/>
+
+    <!-- Show sniff codes in all reports -->
+    <arg value="s"/>
+
+    <!-- Use colors -->
+    <arg name="colors"/>
+
+    <!-- Show results with extensions -->
+    <arg name="extensions" value="php"/>
+</ruleset>

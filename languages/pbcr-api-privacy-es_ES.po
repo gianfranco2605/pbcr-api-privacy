@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PBCR API Privacy 1.0.0\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "API reader (read only)"
+msgstr "Lector de API (solo lectura)"
+
+msgid "Property API"
+msgstr "API de propiedades"
+
+msgid "Only users with an API key can read the property data (price, code, gallery…)"
+msgstr "Solo los usuarios con llave pueden leer los datos de las propiedades (precio, código, galería…)"
+
+msgid "Owner name, contact, address and private notes are always hidden. Turn this on only after the integrations use their key."
+msgstr "El nombre, contacto y dirección del propietario y las notas privadas siempre están ocultos. Activar solo cuando las integraciones ya usen su llave."
+
+msgid "Settings"
+msgstr "Ajustes"
+
+msgid "PBCR API Privacy"
+msgstr "PBCR Privacidad de la API"
+
+msgid "Removes private owner data from the property REST API and, optionally, limits the property data block to users with an API key."
+msgstr "Quita los datos privados del propietario de la API REST de propiedades y, opcionalmente, limita los datos de las propiedades a usuarios con llave."
